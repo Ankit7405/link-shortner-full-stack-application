@@ -12,37 +12,50 @@ const Navbar = () => {
     <div className="h-16 bg-gradient-to-r from-blue-500 to-purple-600 z-50 flex items-center sticky top-0">
       <div className="lg:px-14 sm:px-8 px-4 w-full flex justify-between">
         <Link to="/">
-          <h1 className="font-bold text-3xl text-white italic sm:mt-0 mt-2">UrlShortener</h1>
+          <h1 className="font-bold text-3xl text-white italic sm:mt-0 mt-2">
+            UrlShortener
+          </h1>
         </Link>
-        <ul className={`flex sm:gap-10 gap-4 sm:items-center sm:mt-1 sm:pt-0 pt-3 text-slate-800 sm:static absolute left-0 top-[62px] sm:shadow-none shadow-md ${ navbarOpen ? "h-fit sm:pb-0 pb-5" : "h-0 overflow-hidden"} transition-all duration-100 sm:h-fit sm:bg-none sm:w-fit w-full sm:flex-row flex-col px-4 sm:px-0 bg-gradient-to-r from-blue-500 to-purple-600`}>
+        <ul
+          className={`flex sm:gap-10 gap-4 sm:items-center sm:mt-1 sm:pt-0 pt-3 text-slate-800 sm:static absolute left-0 top-[62px] sm:shadow-none shadow-md ${
+            navbarOpen ? "h-fit sm:pb-0 pb-5" : "h-0 overflow-hidden"
+          } transition-all duration-100 sm:h-fit sm:bg-none sm:w-fit w-full sm:flex-row flex-col px-4 sm:px-0 bg-gradient-to-r from-blue-500 to-purple-600`}
+        >
           <li className="hover:text-[#3364F7] font-[500] transition-all duration-150">
-          <Link
+            <Link
               className={`${
                 path === "/" ? "text-white font-semibold" : "text-gray-200"
               }`}
               to="/"
-            >Home</Link>
+            >
+              Home
+            </Link>
           </li>
           <li className="hover:text-[#3364F7] font-[500] transition-all duration-150">
-          <Link
+            <Link
               className={`${
                 path === "/about" ? "text-white font-semibold" : "text-gray-200"
               }`}
               to="/about"
-            >About</Link>
+            >
+              About
+            </Link>
           </li>
-          <Link to="">
-            <li className="sm:ml-0 -ml-1 bg-rose-700 text-white cursor-pointer w-24 text-center font-semibold px-2 py-2 rounded-md hover:text-slate-300 transition-all duration-150">SignUp</li>
+          <Link to="/register">
+            <li className="sm:ml-0 -ml-1 bg-rose-700 text-white cursor-pointer w-24 text-center font-semibold px-2 py-2 rounded-md hover:text-slate-300 transition-all duration-150">
+              SignUp
+            </li>
           </Link>
         </ul>
-        <button className="sm:hidden flex items-center sm:mt-0 mt-2" onClick={() => setNavbarOpen(!navbarOpen)}>
-            {
-                navbarOpen ? (
-                    <RxCross2 className="text-white text-3xl"/>
-                ) : (
-                    <IoIosMenu className="text-white text-3xl"/>
-                )
-            }
+        <button
+          className="sm:hidden flex items-center sm:mt-0 mt-2"
+          onClick={() => setNavbarOpen(!navbarOpen)}
+        >
+          {navbarOpen ? (
+            <RxCross2 className="text-white text-3xl" />
+          ) : (
+            <IoIosMenu className="text-white text-3xl" />
+          )}
         </button>
       </div>
     </div>

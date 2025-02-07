@@ -24,6 +24,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/urls")
 @AllArgsConstructor
+@CrossOrigin("http://localhost:5173")
 public class UrlMappingController {
 
     @Autowired
