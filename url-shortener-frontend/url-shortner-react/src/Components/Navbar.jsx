@@ -12,7 +12,7 @@ const Navbar = () => {
     <div className="h-16 bg-gradient-to-r from-blue-500 to-purple-600 z-50 flex items-center sticky top-0">
       <div className="lg:px-14 sm:px-8 px-4 w-full flex justify-between">
         <Link to="/">
-          <h1 className="font-bold text-3xl text-white italic sm:mt-0 mt-2">
+          <h1 className="font-bold text-3xl text-white sm:mt-0 mt-2">
             UrlShortener
           </h1>
         </Link>
