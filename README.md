@@ -9,4 +9,5 @@ Signup and Login Page:
 
 DashBaord page with Analytics:
 ![image](https://github.com/user-attachments/assets/d425889c-44ce-4880-9ca1-faa4340e1ec7)
-![Uploading image.png…]()
+![image](https://github.com/user-attachments/assets/8ad2776e-8be9-4268-974f-5c708315fd29)
+
