@@ -12,19 +12,21 @@ import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "./Components/ErrorPage";
 
 const AppRouter = () => {
+  const hideHeaderFooter = location.pathname.startsWith("/s");
   return (
     <>
-      <Navbar />
+      {!hideHeaderFooter && <Navbar /> }
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/s/:url" element={<ShortenUrlPage />} />
         <Route path="/register" element={<PrivateRoute publicPage={true}><RegisterPage /></PrivateRoute> } />
         <Route path="/login" element={<PrivateRoute publicPage={true}><LoginPage /></PrivateRoute>} />
         <Route path="/dashboard" element={<PrivateRoute publicPage={false}><DashboardLayout /></PrivateRoute>} />
         <Route path="/error" element={<ErrorPage />}/>
         <Route path="*" element={<ErrorPage message="We can't semm to find the page you are looking for"/>}/>
       </Routes>
-      <Footer />
+      {!hideHeaderFooter && <Footer />}
     </>
   );
 };
